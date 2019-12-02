@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = []
+        for(let i = 0 ; i < 100 ; i++) {
+            arr[i] = i ;
+        }
+        console.log(arr);
+        let secretNum = +prompt('Enter your secret number :');
+        function binarySearch(arr,secretNum) {
+            let guessNumber = +prompt('Enter your number to guess ');
+            let l;
+            let r;
+            mid = parseInt(arr.length/2);
+            while(l<r) {
+                if(guessNumber == secretNum ) {
+                alert('Congratulation !! You has guess');
+                break;
+            }
+                else if (guessNumber < secretNum){
+                    r = mid + 1 ;
+                    guessNumber = +prompt('Too low , you can guess number higher !!')
+
+                } else {
+                    l = mid - 1;
+                    guessNumber = +prompt('Too high , you can guess number lower !!')
+                }
+
+
+            }
+
+        }
+        binarySearch(arr,secretNum);
+
+    </script>
+</body>
+</html>

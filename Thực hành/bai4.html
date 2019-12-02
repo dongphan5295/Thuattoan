@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function listofPhone(num) {
+            let arr = [];
+            for (let i = 0; i < num; i++) {
+                arr[i] = prompt('Enter your phone');
+            }
+            return arr
+
+        }
+        function isViettelphone(arr) {
+            regexp = /^[0](8[6]|9[67]|3[2-9])[0-9]{7}$/
+            for (let i = 0; i < long; i++) {
+                if (regexp.test(arr[i])) {
+                    // return `is Viettel : ${arr[i]}`;
+                    document.write('is Viettel '+arr[i] + '<br>');
+                }else{
+                    document.write('is not Viettel '+arr[i])
+                }
+                // return `is not Viettel : ${arr[i]}`;
+            }
+
+
+        }
+        long = +prompt('Enter length of array')
+        let mang = listofPhone(long);
+        // console.log(isViettelphone(mang));
+        isViettelphone(mang);
+    </script>
+</body>
+
+</html>
